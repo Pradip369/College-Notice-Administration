@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}profile{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h1 style="text-align: center;"><i>Profile Page</i></h1>
+
+
+<form enctype="multipart/form-data" method="post" style="margin-left: 10px;">
+    <img style="width: 10%; height: 10%; border-radius: 90px;  margin: 20px 0px 20px 40%; " src="/media/{{profile.my_img}}" alt="">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit"/>
+</form>
+{% endblock %}

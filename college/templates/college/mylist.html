@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}my_list{% endblock %}
+{% block content %}
+
+<br>
+
+<h2 style="color: mediumvioletred;"><i><u>All Notices:</u></i></h2>
+
+
+{% for n in notices %}
+<p>{{forloop.counter}}. {{n}}</p>
+{% endfor %}
+
+<h2 style="color: mediumvioletred;"><i><u>Question:</u></i></h2>
+{% for q in question %}
+<p>{{forloop.counter}}. {{q.question}}</p>
+{% endfor %}
+
+
+{% endblock %}

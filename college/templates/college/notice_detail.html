@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}notice_detail{% endblock %}
+{% block content %}
+<h1 style="text-align: center;"><i>Notice detail:</i></h1>
+<h1>Subject : {{notice.subject}}</h1>
+<h4>Release Date:{{notice.cr_date}}</notice></h4>
+<h2>{{notice.msg}}</h2>
+<h3><a href="/college/notice">Back</a></h3>
+{% endblock %}

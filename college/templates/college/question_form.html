@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}question{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h1 style="text-align: center;"><i> Ask Question</i></h1>
+
+
+<form enctype="multipart/form-data" method="post">
+{% csrf_token %}
+{{form | crispy}}
+<input type="submit"/>
+</form>
+
+
+{% endblock %}

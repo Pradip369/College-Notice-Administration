@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}notice_list{% endblock %}
+{% block content %}
+
+<h1 style="text-align: center;"><i>Home Page</i></h1>
+
+<h2>Notices:</h2>
+
+<form>
+<input value="{{request.GET.si}}" type="text" name="si"/>
+<input type = "submit"/>
+</form><br>
+
+
+{% for i in notice_list %}
+<a href="/college/notice/{{i.id}}">{{i.subject}}</a>
+{% endfor %}
+{% endblock %}
